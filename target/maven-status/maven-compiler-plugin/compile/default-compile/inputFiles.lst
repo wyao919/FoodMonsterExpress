@@ -28,7 +28,6 @@ F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Service\CartItemService.ja
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Config\SecurityInitializer.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Service\CheckoutEmailServiceImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\ShoppingCartDAO.java
-F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\converter\CustomerConverter.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Config\ExpressAppInitializer.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\OrderDAOImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Controller\ShoppingCartController.java

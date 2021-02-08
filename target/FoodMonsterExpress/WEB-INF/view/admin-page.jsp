@@ -178,8 +178,46 @@
 		</table>
 	</div>
 	<br>
+<div class="container demotext">
+	<h4>
+		<b>Hello! Welcome to my Demo App</b>
+	</h4>
 
-	<div class="demotext container">
+	For demo purposes, the Menu Controller/Editor will be open for you to demo the
+	database functions.<br> Feel free to add, delete, update and
+	search items. <br> <br> In order to preserve this
+	demo, please do not delete all items or items that you have not
+	created.<br> <br>
+	<b>Note: </b>Please
+	excuse the slow loading speed, this app is hosted on a free-tier AWS
+	server<br> <br>
+</div>
+
+	<div class="container demotext">
+
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			View App Features and Technologies
+		</button>
+
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+
+			<h4>
+				<b>Languages and Technologies</b>
+			</h4>
+			*JAVA, Spring MVC, Spring Security, Hibernate, JavaScript, HTML, CSS,
+			Jquery, BootStrap, MySQL, AWS <br> <br>
+			<h4>
+				<b>App Features</b>
+			</h4>
+			*BCrypt Password Encoder, SQL Relational Databases, Java Mail Sender,
+			JSR Custom Annotations <br> <br>
+		</div>
+	</div>
+	</div>
+
+
+	<%--<div class="demotext container">
 		<h4>
 			<b>Hello! Welcome to my Demo App</b>
 		</h4>
@@ -203,7 +241,7 @@
 		excuse the slow loading speed, this app is hosted on a free-tier AWS
 		server
 	</div>
-
+--%>
 
 	<script
 		src="${pageContext.request.contextPath}/webjars/jquery/3.5.1/jquery.min.js"></script>

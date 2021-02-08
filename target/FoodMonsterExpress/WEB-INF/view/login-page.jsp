@@ -111,12 +111,12 @@ Username or password is incorrect
 			<h4>Hello! If you do not wish to create an account, you may use
 				the test account below.</h4>
 			<h4>However, you will have a more personalized experience if you
-				register your own account.</h4>
+				register your own accounts.</h4>
 			<br>
 			<h5>
 				Username: test<br> Password: test123 <br>
 			</h5>
-			<br> <br> <br> <b>Note: </b>Please
+			<br>  <b>Note: </b>Please
 			excuse the slow loading speed, this app is hosted on a free-tier AWS
 			server
 
