@@ -1,0 +1,54 @@
+@charset "ISO-8859-1";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+
+
+h1 {
+	color: black;
+
+}
+
+h2 {
+	color: rgb(0, 255, 128) e;
+}
+
+.myTableClass {
+	/* 	color: red; */
+	width: 75%;
+	font-family: sans-serif;
+}
+
+.searchBox {
+	float: left;
+	margin-right: 0px;
+}
+
+.errors {
+	color: red;
+}
+
+.loginError {
+	text-align: center;
+	color: red;
+	margin-right: 200px;
+}
+
+.searchbox {
+position: relative; 
+/* right: 100em;
+ */}
+
+.willyPic {
+	border-radius: 50%;
+	float: right;
+}
+
+.resume {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.demotext{
+    font-family: Raleway, sans-serif;
+}
