@@ -60,8 +60,9 @@
 		<h3>If you created an account and used a real email address</h3>
 		<h3>An Email has also been sent to your inbox!!</h3>
 		<br><br>
-		<h4><a href="#">Click here to Download my Resume</a></h4>
+		<h4><a href="https://willyyao.com/resume/Current%20Resume.pdf">Click here to Download my Resume</a></h4>
 		<h4><a href="mailto:wyao919@gmail.com">Shoot me a message!</a></h4>
+		<h4><a href="https://willyyao.com/">www.WillyYao.com</a></h4>
 	</div>
 
 	<script

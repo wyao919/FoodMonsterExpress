@@ -85,8 +85,9 @@
 	</div>
 
 	<div align="center" class="container demotext">
-		<br> <br> <b>Note: </b>Please excuse the slow loading speed,
-		this app is hosted on a AWS free-tier.
+		<br> <br> <b>Note: </b>Please
+		excuse the slow loading speed, this app is hosted on a free-tier AWS
+		server.
 
 	</div>
 

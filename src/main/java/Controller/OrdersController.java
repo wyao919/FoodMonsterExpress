@@ -55,12 +55,18 @@ public class OrdersController {
 
         double cartTotal;
         cartTotal = Double.parseDouble(session.getAttribute("total").toString());
+        System.out.println("this is attribute name "+ session.getAttribute("sentEmail"));
 
         if (cartTotal == 0) {
             return "redirect:/placeOrderPage";
         }
 
-        checkoutEmailService.sendEmail(session);
+        if (session.getAttribute("sentEmail") == null)
+        {
+            System.out.println("sending emails");
+            checkoutEmailService.sendEmail(session);
+        }
+        session.setAttribute("sentEmail", "notnull");
         return "demo-finished-page";
 
     }

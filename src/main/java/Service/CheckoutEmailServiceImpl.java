@@ -2,36 +2,24 @@ package Service;
 
 import javax.servlet.http.HttpSession;
 
+import Dao.CheckOutEmailDAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CheckoutEmailServiceImpl implements CheckoutEmailService{
 	
+	public final CheckOutEmailDAO checkOutEmailDAO;
+
 	@Autowired
-	JavaMailSender javaMailSender;
-	
+	public CheckoutEmailServiceImpl(CheckOutEmailDAO checkOutEmailDAO) {
+		this.checkOutEmailDAO = checkOutEmailDAO;
+	}
 
 	@Override
 	public void sendEmail(HttpSession session) {
-		String name = (String) session.getAttribute("name");
-		String email = (String) session.getAttribute("email");
-		
-		SimpleMailMessage userReplyEmail = new SimpleMailMessage();
-		SimpleMailMessage adminEmail = new SimpleMailMessage();
-		
-		adminEmail.setSubject("Someone has just demo'd your App!");
-		adminEmail.setTo("wyao919@gmail.com");
-		adminEmail.setText("Name: " + name + "\nEmail: " + email);
-		
-		userReplyEmail.setSubject("Hi " + name + ", thank you for demoing my app!");
-		userReplyEmail.setTo(email);
-		userReplyEmail.setText("Thank you for taking the time to demo my app! \nFor more details, please contact me at " + "'wyao919@gmail.com'");
-		
-		javaMailSender.send(adminEmail);
-		javaMailSender.send(userReplyEmail);  
+
+		checkOutEmailDAO.sendEmail(session);
 		
 	}
 }
