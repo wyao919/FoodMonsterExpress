@@ -206,7 +206,7 @@
 				<b>Languages and Technologies</b>
 			</h4>
 			*JAVA, Spring MVC, Spring Security, Hibernate, JavaScript, HTML, CSS,
-			Jquery, BootStrap, MySQL, AWS <br> <br>
+			JQuery, Bootstrap, MySQL, AWS <br> <br>
 			<h4>
 				<b>App Features</b>
 			</h4>

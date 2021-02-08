@@ -6,6 +6,7 @@ F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Service\CartItemServiceImp
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Controller\TestController.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\CartItemDAOImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\MenuDAOImpl.java
+F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\CheckOutEmailDAO.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\RegistrationDAOImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\ShoppingCartDAOImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Entity\Orders.java
@@ -35,6 +36,7 @@ F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Service\MenuServiceImpl.ja
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Controller\AdminController.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Config\ExpressConfig.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Entity\Customer.java
+F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Dao\CheckOutEmailDAOImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Service\ShoppingCartServiceImpl.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Entity\MenuDetail.java
 F:\Java\DemoProjects\FoodMonsterExpress\src\main\java\Controller\RegistrationController.java
