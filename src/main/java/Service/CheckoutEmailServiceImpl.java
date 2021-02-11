@@ -2,14 +2,15 @@ package Service;
 
 import javax.servlet.http.HttpSession;
 
-import Dao.CheckOutEmailDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import Dao.CheckOutEmailDAO;
 
 @Service
 public class CheckoutEmailServiceImpl implements CheckoutEmailService{
 	
-	public final CheckOutEmailDAO checkOutEmailDAO;
+	private final CheckOutEmailDAO checkOutEmailDAO;
 
 	@Autowired
 	public CheckoutEmailServiceImpl(CheckOutEmailDAO checkOutEmailDAO) {
