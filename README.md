@@ -1,6 +1,6 @@
 # FoodMonsterExpress
  
-Languages and Technologies used
+Languages and Technologies used <br>
 *JAVA, Spring MVC, Spring Security, Hibernate, JavaScript, HTML, CSS, JQuery, Bootstrap, MySQL, AWS
 
 App Features
