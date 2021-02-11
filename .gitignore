@@ -3,6 +3,7 @@
 
 # Properties
 configInfo.properties
+email.properties
 *.settings
 
 # Log file
