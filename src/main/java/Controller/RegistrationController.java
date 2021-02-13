@@ -43,6 +43,10 @@ public class RegistrationController {
         if (userName.size() > 0) {
             result.addError(new FieldError("userAccount", "username", "This username already exists"));
         }
+        if(!userAccount.getrPassword().equals(userAccount.getPassword()))
+        {
+            result.addError(new FieldError("userAccount", "rPassword", "Passwords do not match"));
+        }
 
         if (result.hasErrors()) {
             System.out.println("registration page has errors");

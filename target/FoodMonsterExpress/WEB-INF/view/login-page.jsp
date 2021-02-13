@@ -123,8 +123,6 @@ Username or password is incorrect
 
 		</div>
 
-		.
-
 	</main>
 
 	<script

@@ -97,6 +97,16 @@
 								</div>
 
 								<div class="form-group row">
+									<label for="rPassword"
+										   class="col-md-4 col-form-label text-md-right">Retype Password</label>
+									<div class="col-md-6">
+										<form:password id="rPassword" class="form-control"
+													   path="rPassword" />
+										<form:errors path="rPassword" cssClass="errors"></form:errors>
+									</div>
+								</div>
+
+								<div class="form-group row">
 									<label for="password"
 										class="col-md-4 col-form-label text-md-right">E-Mail
 										Address</label>
