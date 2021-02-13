@@ -1,14 +1,6 @@
 package Entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -30,6 +22,9 @@ public class UserAccount {
 	@Size(min = 5, message = "Password must be at least 5 Characters")
 	@Column(name = "password")
 	private String password;
+	@Transient
+	private String rPassword;
+
 	@Email
 	@NotBlank(message = "Email can't be blank")
 	@Column(name = "email")
@@ -100,10 +95,25 @@ public class UserAccount {
 		this.customer = customer;
 	}
 
-	@Override
-	public String toString() {
-		return "UserAccount [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email
-				+ ", roles=" + roles + ", enabled=" + enabled + ", customer=" + customer + "]";
+	public String getrPassword() {
+		return rPassword;
 	}
 
+	public void setrPassword(String rPassword) {
+		this.rPassword = rPassword;
+	}
+
+	@Override
+	public String toString() {
+		return "UserAccount{" +
+				"id=" + id +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", rPassword='" + rPassword + '\'' +
+				", email='" + email + '\'' +
+				", roles='" + roles + '\'' +
+				", enabled=" + enabled +
+				", customer=" + customer +
+				'}';
+	}
 }
