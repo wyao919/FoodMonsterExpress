@@ -35,7 +35,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
     public List<UserAccount> getUserName(String name) {
 
         Session session = sessionFactory.getCurrentSession();
-        List<UserAccount> resultList = session.createQuery("From UserAccount where username = '" + name + "'").getResultList();
+        List<UserAccount> resultList = session.createQuery("From UserAccounts where username = '" + name + "'").getResultList();
 
         return resultList;
     }
