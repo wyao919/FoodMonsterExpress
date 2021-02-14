@@ -107,7 +107,7 @@
 								</div>
 
 								<div class="form-group row">
-									<label for="password"
+									<label for="email"
 										class="col-md-4 col-form-label text-md-right">E-Mail
 										Address</label>
 									<div class="col-md-6">
