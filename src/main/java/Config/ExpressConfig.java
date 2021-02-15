@@ -26,13 +26,17 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = { "Controller", "Dao", "Service", "converter", "Config" })
+@ComponentScan(basePackages = { "Controller", "Dao", "Service", "Config" })
 @EnableTransactionManagement
 @PropertySource({ "classpath:configInfo.properties", "classpath:email.properties" })
 public class ExpressConfig implements WebMvcConfigurer {
 
+	private final Environment environment;
+
 	@Autowired
-	Environment environment;
+	public ExpressConfig(Environment environment) {
+		this.environment = environment;
+	}
 
 	@Bean
 	InternalResourceViewResolver getViewResolver() {
