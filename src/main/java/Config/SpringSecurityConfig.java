@@ -3,6 +3,7 @@ package Config;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -15,10 +16,10 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
-	DataSource dataSource;
+	private DataSource dataSource;
 
 	@Autowired
-	BCryptPasswordEncoder bCryptPasswordEncoder;
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -31,27 +32,29 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http
-			.authorizeRequests()
-			.antMatchers("/placeOrderPage**").permitAll()
-			.antMatchers("/cart/**").authenticated()
-			.antMatchers("/login**", "/register/**").anonymous()
-			.and()
-			.formLogin()
-			.loginPage("/login").defaultSuccessUrl("/placeOrderPage", true)
-			.and()
-			.logout()
-			.logoutUrl("/logout").permitAll()
-			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-			.clearAuthentication(true)
-			.invalidateHttpSession(true)
-			.deleteCookies("JSESSIONID")
-			.logoutSuccessUrl("/login");
+				.authorizeRequests()
+				.antMatchers("/placeOrderPage**").permitAll()
+				.antMatchers("/cart/**").authenticated()
+				.antMatchers("/login**", "/register/**").anonymous()
+				.and()
+				.formLogin()
+				.loginPage("/login").defaultSuccessUrl("/placeOrderPage", true)
+				.and()
+				.logout()
+				.logoutUrl("/logout").permitAll()
+				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+				.clearAuthentication(true)
+				.invalidateHttpSession(true)
+				.deleteCookies("JSESSIONID")
+				.logoutSuccessUrl("/login");
 
 	}
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/resources/**", "/static/**", "/webjars/**" );
+		web.ignoring().antMatchers("/resources/**", "/static/**", "/webjars/**");
 	}
+
+
 
 }

@@ -24,6 +24,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import javax.sql.DataSource;
+
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = { "Controller", "Dao", "Service", "Config" })
@@ -49,8 +51,9 @@ public class ExpressConfig implements WebMvcConfigurer {
 	}
 
 	@Bean
-	public DriverManagerDataSource getDataSource() {
+	public DataSource getDataSource() {
 
+		System.out.println("in new datasourece **********************");
 		System.out.println(environment.getProperty("myjdbc.url"));
 		System.out.println((environment.getProperty("myjdbc.username")));
 		System.out.println(environment.getProperty("myjdbc.password"));
@@ -108,10 +111,9 @@ public class ExpressConfig implements WebMvcConfigurer {
 	}
 
 	@Bean
-	BCryptPasswordEncoder passwordEncoder() {
+	BCryptPasswordEncoder bCryptPasswordEncoder() {
 
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		return passwordEncoder;
+		return new BCryptPasswordEncoder();
 	}
 
 	@Bean
