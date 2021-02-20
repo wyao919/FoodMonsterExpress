@@ -3,7 +3,6 @@ package Config;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -15,11 +14,16 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private DataSource dataSource;
+
+	private final DataSource dataSource;
+
+	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	public SpringSecurityConfig(DataSource dataSource, BCryptPasswordEncoder bCryptPasswordEncoder) {
+		this.dataSource = dataSource;
+		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+	}
 
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
