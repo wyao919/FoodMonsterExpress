@@ -44,7 +44,11 @@
 					id="login" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/login">Login</a> <a
 					id="register" class="nav-item nav-link active"
-					href="${pageContext.request.contextPath}/register">Register</a> <a
+					href="${pageContext.request.contextPath}/register">Register</a>
+				<a
+						id="updatePW" class="nav-item nav-link active"
+						href="${pageContext.request.contextPath}/updatePw">Update Password</a>
+				<a
 					id="logout" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/logout">Logout</a>
 			</div>
@@ -64,22 +68,25 @@
 							<form:form action="" method="POST" onsubmit="return true">
 								<div class="alert alert-info text-center" id="addtocart">${addtocartmessage}</div>
 								<div class="alert alert-info text-center" id="registersuccess">${message}</div>
+								<div class="alert alert-info text-center" id="updatePw">${passwordChange}</div>
 
 								<div class="form-group row">
-									<label for="email_address"
+									<label for="username"
 										class="col-md-4 col-form-label text-md-right">User
 										Name</label>
 									<div class="col-md-6">
-										<input type="text" placeholder="username" name="username">
+
+											<input type="text" placeholder="username" name="username" id="username">
+
 
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label
+									<label for="password"
 										class="col-md-4 col-form-label text-md-right">Password</label>
 									<div class="col-md-6">
-										<input type="password" placeholder="password" name="password">
+											<input type="password" placeholder="password" name="password" id="password">
 
 									</div>
 								</div>
@@ -142,6 +149,7 @@ Username or password is incorrect
 			$("#register").hide();
 		} else {
 			$("#logout").hide();
+			$("#updatePW").hide();
 			console.log('in logout ' + name.length)
 		}
 		if (name.length === 0) {
@@ -151,11 +159,15 @@ Username or password is incorrect
 		}
 		var addtocart = `${addtocartmessage}`
 		var message = `${message}`
+		var pwChange = `${passwordChange}`
 		if (message.length === 0) {
 			$("#registersuccess").hide();
 		}
 		if (addtocart.length === 0) {
 			$("#addtocart").hide();
+		}
+		if (pwChange.length === 0) {
+			$("#updatePw").hide();
 		}
 	</script>
 

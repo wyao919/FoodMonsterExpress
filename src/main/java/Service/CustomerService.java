@@ -1,11 +1,8 @@
 package Service;
 
-import java.util.List;
-
 import org.springframework.security.core.Authentication;
 
 import Entity.Customer;
-import Entity.UserAccount;
 
 public interface CustomerService {
 	

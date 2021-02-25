@@ -33,7 +33,11 @@
 					id="login" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/login">Login</a> <a
 					id="register" class="nav-item nav-link active"
-					href="${pageContext.request.contextPath}/register">Register</a> <a
+					href="${pageContext.request.contextPath}/register">Register</a>
+				<a
+						id="updatePW" class="nav-item nav-link active"
+						href="${pageContext.request.contextPath}/updatePw">Update Password</a>
+				<a
 					id="logout" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/logout">Logout</a>
 			</div>
@@ -58,6 +62,7 @@
 			$("#register").hide();
 		} else {
 			$("#logout").hide();
+			$("#updatePW").hide();
 			console.log('in logout ' + name.length)
 		}
 		if(name.length === 0)

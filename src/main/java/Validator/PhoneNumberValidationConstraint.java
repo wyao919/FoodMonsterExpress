@@ -3,8 +3,6 @@ package Validator;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.sun.mail.handlers.message_rfc822;
-
 public class PhoneNumberValidationConstraint implements ConstraintValidator<PhoneValidation, String>{
 	
 	private String message;

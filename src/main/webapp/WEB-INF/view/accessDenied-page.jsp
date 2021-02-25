@@ -1,14 +1,14 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
+
 <link type="text/css" rel="stylesheet"
 	href="${pageContext.request.contextPath}/webjars/bootstrap/4.5.3/css/bootstrap.min.css">
 
-<link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/mystylesheet.css">
 <meta charset="ISO-8859-1">
 <title>Access Denied</title>
 </head>
@@ -24,7 +24,7 @@
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav">
 				<a class="nav-item nav-link active"
-					href="${pageContext.request.contextPath}/">Admin Controller <span
+					href="${pageContext.request.contextPath}/">Menu Controller <span
 					class="sr-only">(current)</span></a> <a
 					class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/placeOrderPage">Order</a>
@@ -33,19 +33,21 @@
 					id="login" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/login">Login</a> <a
 					id="register" class="nav-item nav-link active"
-					href="${pageContext.request.contextPath}/register">Register</a>
-				<a
-						id="updatePW" class="nav-item nav-link active"
-						href="${pageContext.request.contextPath}/updatePw">Update Password</a>
-				<a
+					href="${pageContext.request.contextPath}/register">Register</a> <a
 					id="logout" class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/logout">Logout</a>
 			</div>
 		</div>
 	</nav>
-	<h1 align="center">hello ${name}</h1>
 
-	<h1 align="center">You are already logged in</h1>
+	<div class ="container">
+
+		<H1 align="center">Hello, you are unable to change your password on the test account</H1>
+
+	</div>
+
+
+
 	<script
 		src="${pageContext.request.contextPath}/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script
@@ -55,17 +57,16 @@
 			<script>
 		var name = `${name}`
 		console.log(name)
-		if (name.length !== 0) {
+		if (name.length != 0) {
 			console.log('not null or empty' + name.length)
 			console.log(name.length)
 			$("#login").hide();
 			$("#register").hide();
 		} else {
 			$("#logout").hide();
-			$("#updatePW").hide();
 			console.log('in logout ' + name.length)
 		}
-		if(name.length === 0)
+		if(name.length == 0)
 		{
 		$("#cart").click( function() { alert('You must be logged in to view the cart'); });
 		}

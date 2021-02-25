@@ -53,7 +53,6 @@ public class ExpressConfig implements WebMvcConfigurer {
 	@Bean
 	public DataSource getDataSource() {
 
-		System.out.println("in new datasourece **********************");
 		System.out.println(environment.getProperty("myjdbc.url"));
 		System.out.println((environment.getProperty("myjdbc.username")));
 		System.out.println(environment.getProperty("myjdbc.password"));
