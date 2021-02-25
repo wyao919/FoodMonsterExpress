@@ -7,14 +7,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import Entity.CartItem;
 import Entity.Customer;
 import Entity.Menu;
-import Entity.UserAccount;
 import Service.CartItemService;
 import Service.CustomerService;
 import Service.MenuService;

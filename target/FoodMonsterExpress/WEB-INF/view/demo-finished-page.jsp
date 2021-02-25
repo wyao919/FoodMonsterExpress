@@ -43,7 +43,9 @@
 				<li class="nav-item active"><a id="register"
 					class="nav-item nav-link active"
 					href="${pageContext.request.contextPath}/register">Register</a></li>
-
+				<li class="nav-item active"><a
+						id="updatePW" class="nav-item nav-link active"
+						href="${pageContext.request.contextPath}/updatePw">Update Password</a></li>
 
 				<li class="nav-item active"><a id="logout"
 					class="nav-item nav-link active"
@@ -81,6 +83,7 @@
 			$("#register").hide();
 		} else {
 			$("#logout").hide();
+			$("#updatePW").hide();
 			console.log('in logout ' + name.length)
 		}
 		if (name.length === 0) {
